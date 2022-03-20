@@ -1,8 +1,9 @@
 import json
 import heapq
 
-
-with open('me.json',encoding="utf8") as jsonFile:
+file1 = 'file1.json'
+file2 = 'file2.json'
+with open(file1,encoding="utf8") as jsonFile:
     jsonObject = json.load(jsonFile)
     jsonFile.close()
 
@@ -12,7 +13,7 @@ counts = dict()
 for i in jsonObject['metamask']['permissionsHistory']:
   counts[i] = counts.get(i, 0) + 1
 
-with open('pikumobile.txt',encoding="utf8") as jsonFile:
+with open('file2.json',encoding="utf8") as jsonFile:
     jsonObject = json.load(jsonFile)
     jsonFile.close()
 
